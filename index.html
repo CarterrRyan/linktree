@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Carter Todd</title>
+    <link 
+     href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+     rel="stylesheet"/>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js" defer></script>
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <div class=main>
+        <section id="app">
+            <H1>My links</H1>
+            <img class=avatar v-bind:src="avatar" alt = 'Avatar'>
+            <h4> Aspiring software developer</h4>
+            <a v-bind:href=url><button @click="github">My Github</button></a><br>
+            <a v-bind:href=url><button @click="twitter">My Twitter</button></a><br>
+            <a v-bind:href=url><button @click="linkedin">My Linkedin</button></a>
+        </section>
+    </div>
+</body>
+</html>
