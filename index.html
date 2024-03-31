@@ -7,6 +7,7 @@
      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
      rel="stylesheet"/>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/df0e78fd04.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js" defer></script>
     <script src="app.js" defer></script>
 </head>
@@ -19,6 +20,17 @@
             <a v-bind:href=url><button @click="github">My Github</button></a><br>
             <a v-bind:href=url><button @click="twitter">My Twitter</button></a><br>
             <a v-bind:href=url><button @click="linkedin">My Linkedin</button></a>
+            <h3>
+                About me
+                <i @click="toggleAbout" class="fas fa-angle-down" :class="{'rotate': showAbout, 'rotate-up':!showAbout}"></i>
+            </h3>
+            <div v-if="showAbout" class="about-content">
+                <ul>
+                    <li>My name is Carter Todd</li>
+                    <li>I am 17</li>
+                    <li>Email: <a :href="email">cartertodd123@gmail.com</li></a>
+                </ul>
+            </div>
         </section>
     </div>
 </body>

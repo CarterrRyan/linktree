@@ -2,7 +2,9 @@ const app = Vue.createApp({
     data(){
         return{
             url:'',
-            avatar:'/resources/profile-avatar.png'
+            avatar:'/resources/profile-avatar.png',
+            showAbout:false,
+            email: 'cartertodd123@gmail.com',
         }
     },
     methods:{
@@ -15,6 +17,9 @@ const app = Vue.createApp({
         linkedin(){
             this.url='https://www.linkedin.com/in/carter-todd-b85a03292/';
         },
+        toggleAbout(){
+            this.showAbout=!this.showAbout;
+        }
     }
 })
 app.mount('#app')   
