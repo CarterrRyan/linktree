@@ -9,12 +9,21 @@ const app = Vue.createApp({
     },
     methods:{
         github(){
+            // axios.get('/api/github')
+            // .then(response =>{
+            //     this.url = response.data.url;
+            // })
+            // .catch(error =>{
+            //     console.log('Error fetching Github url',error);
+            // });
             axios.get('/api/github')
-            .then(response =>{
-                this.url = response.data.url;
+            .then(response => {
+                // Handle successful response
+                console.log(response.data);
             })
-            .catch(error =>{
-                console.log('Error fetching Github url',error);
+            .catch(error => {
+                // Handle error
+                console.error('Error fetching GitHub URL:', error);
             });
         },
         twitter(){
