@@ -23,7 +23,7 @@ const app = Vue.createApp({
                 this.url = response.data.url;
             })
             .catch(error=>{
-                console.log('Erroor fetching twitter url',error);
+                console.log('Error fetching twitter url',error);
             });
         },
         linkedin(){
