@@ -19,6 +19,17 @@ const app = Vue.createApp({
         },
         toggleAbout(){
             this.showAbout=!this.showAbout;
+        },
+        copyToClipboard(){
+            navigator.clipboard.writeText(this.email)
+           .then(()=>
+            {
+                alert('Email copied to clipboard');
+            })
+            .catch((err)=>
+            {
+                alert('Failed to copy email to clipboard');
+            });
         }
     }
 })

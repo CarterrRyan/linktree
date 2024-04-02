@@ -11,6 +11,7 @@
     webpage the same width of the device-->
     <script src="https://kit.fontawesome.com/df0e78fd04.js" crossorigin="anonymous"></script> <!-- imports font awesome-->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js" defer></script>
+    <script src="https://unpkg.com/vue-clipboard2@0.3.1/dist/vue-clipboard.min.js"></script> <!--imports vue clipboard-->
     <script src="app.js" defer></script>
 </head>
 <body>
@@ -30,7 +31,7 @@
                 <ul>
                     <li>My name is Carter Todd</li>
                     <li>I am 17</li>
-                    <li>Email: <a :href="email">cartertodd123@gmail.com</li></a>
+                    <li>Email: cartertodd123@gmail.com      <i @click="copyToClipboard" class="fa-solid fa-copy"></i></li>
                 </ul>
             </div>
         </section>
