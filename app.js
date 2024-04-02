@@ -9,7 +9,13 @@ const app = Vue.createApp({
     },
     methods:{
         github(){
-            this.url = 'https://github.com/CarterrRyan';
+            axios.get('/api/github')
+            .then(response =>{
+                this.url = response.data.url;
+            })
+            .catch(error =>{
+                console.log('Error fetching Github url',error);
+            });
         },
         twitter(){
             this.url ='https://twitter.com/CarterrRyan';
