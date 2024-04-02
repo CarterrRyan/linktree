@@ -8,7 +8,7 @@ app.get('/api/github',(req,res)=>{
     const githubUrl ='https://github.com/CarterrRyan';
     res.json({url:githubUrl});
 });
-app.get('/api/twitter',(res,reg)=>{
+app.get('/api/twitter',(req,res)=>{
     const twitterUrl='https://twitter.com/CarterrRyan';
     res.json({url:twitterUrl});
 });
