@@ -18,10 +18,22 @@ const app = Vue.createApp({
             });
         },
         twitter(){
-            this.url ='https://twitter.com/CarterrRyan';
+            axios.get('/api/twitter')
+            .then(response =>{
+                this.url = response.data.url;
+            })
+            .catch(error=>{
+                console.log('Erroor fetching twitter url',error);
+            });
         },
         linkedin(){
-            this.url='https://www.linkedin.com/in/carter-todd-b85a03292/';
+            axios.get('/api/linkedIn')
+            .then(response=>{
+                this.url=response.data.url;
+            })
+            .catch(error=>{
+                console.log('Error fetching linkedIn url',error);
+            });
         },
         toggleAbout(){
             this.showAbout=!this.showAbout;
