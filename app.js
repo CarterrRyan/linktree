@@ -9,7 +9,7 @@ const app = Vue.createApp({
     },
     methods:{
         github(){
-            axios.get('/api/github')
+            axios.get('https://guarded-bastion-04501-1bab4507eb4c.herokuapp.com/api/github')
             .then(response =>{
                 this.url = response.data.url;
             })
@@ -18,7 +18,7 @@ const app = Vue.createApp({
             });
         },
         twitter(){
-            axios.get('/api/twitter')
+            axios.get('https://guarded-bastion-04501-1bab4507eb4c.herokuapp.com/api/twitter')
             .then(response =>{
                 this.url = response.data.url;
             })
@@ -27,7 +27,7 @@ const app = Vue.createApp({
             });
         },
         linkedin(){
-            axios.get('/api/linkedIn')
+            axios.get('https://guarded-bastion-04501-1bab4507eb4c.herokuapp.com/api/linkedIn')
             .then(response=>{
                 this.url=response.data.url;
             })
