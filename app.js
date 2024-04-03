@@ -11,7 +11,7 @@ const app = Vue.createApp({
         github(){
             axios.get('https://guarded-bastion-04501-1bab4507eb4c.herokuapp.com/api/github')
             .then(response =>{
-                this.url = response.data.url;
+                window.location.href = response.data.url;
             })
             .catch(error =>{
                 console.log('Error fetching Github url',error);
@@ -20,7 +20,7 @@ const app = Vue.createApp({
         twitter(){
             axios.get('https://guarded-bastion-04501-1bab4507eb4c.herokuapp.com/api/twitter')
             .then(response =>{
-                this.url = response.data.url;
+                window.location.href  = response.data.url;
             })
             .catch(error=>{
                 console.log('Error fetching twitter url',error);
@@ -29,7 +29,7 @@ const app = Vue.createApp({
         linkedin(){
             axios.get('https://guarded-bastion-04501-1bab4507eb4c.herokuapp.com/api/linkedIn')
             .then(response=>{
-                this.url=response.data.url;
+                window.location.href = response.data.url;
             })
             .catch(error=>{
                 console.log('Error fetching linkedIn url',error);
