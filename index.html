@@ -21,9 +21,9 @@
             <H1>My links</H1>
             <img class=avatar v-bind:src="avatar" alt = 'Avatar'>
             <h4> Aspiring software developer</h4>
-            <a v-bind:href=url><button @click.prevent="github"><i class="fa-brands fa-github"></i>My Github</button></a><br>
-            <a v-bind:href=url><button @click.prevent="twitter"><i class="fa-brands fa-x-twitter"></i>My Twitter</button></a><br>
-            <a v-bind:href=url><button @click.prevent="linkedin"><i class="fa-brands fa-linkedin"></i>My Linkedin</button></a>
+            <a v-bind:href=url><button @click="github"><i class="fa-brands fa-github"></i>My Github</button></a><br>
+            <a v-bind:href=url><button @click="twitter"><i class="fa-brands fa-x-twitter"></i>My Twitter</button></a><br>
+            <a v-bind:href=url><button @click="linkedin"><i class="fa-brands fa-linkedin"></i>My Linkedin</button></a>
             <h3>
                 About me
                 <i @click="toggleAbout" class="fas fa-angle-down" :class="{'rotate': showAbout, 'rotate-up':!showAbout}"></i>
