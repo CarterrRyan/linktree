@@ -4,7 +4,10 @@ const app = Vue.createApp({
             url:'',
             avatar:'/resources/profile-avatar.png',
             showAbout:false,
+            showEmail:false,
             email: 'cartertodd123@gmail.com',
+            userEmail:'',
+            emailBody:'',
         }
     },
     methods:{
@@ -38,6 +41,9 @@ const app = Vue.createApp({
         toggleAbout(){
             this.showAbout=!this.showAbout;
         },
+        toggleEmail(){
+            this.showEmail=!this.showEmail;
+        },
         copyToClipboard(){
             navigator.clipboard.writeText(this.email)
            .then(()=>
@@ -48,6 +54,19 @@ const app = Vue.createApp({
             {
                 alert('Failed to copy email to clipboard');
             });
+        },
+        sendEmail(){
+            axios.post('https://guarded-bastion-04501-1bab4507eb4c.herokuapp.com/api/email',{
+                userEmail:this.userEmail,
+                body:this.emailBody,
+            })
+            .then(response=>{
+                console.log(response.data);
+            })
+            .catch(error=>{
+                console.log('Error sending email',error);
+            })
+            
         }
     }
 })
