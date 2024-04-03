@@ -43,7 +43,8 @@
                 <h4>Your email:</h4>
                 <input class="emailInput" type="text" placeholder="Your email goes here" v-model="userEmail">
                 <h4>Email body:</h4>
-                <textarea class="emailBody" type="text" placeholder="Email body goes here" v-model="emailBody"></textarea><br>
+                <textarea class="emailBody" v-on:input="updateBodyLength" type="text" placeholder="Email body goes here" v-model="emailBody" maxlength="500"></textarea><br>
+                <p>{{bodyLength}}/500</p>
                 <button @click="sendEmail">Send Email</button>
             </div>
         </section>

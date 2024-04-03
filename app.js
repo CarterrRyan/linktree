@@ -8,6 +8,7 @@ const app = Vue.createApp({
             email: 'cartertodd123@gmail.com',
             userEmail:'',
             emailBody:'',
+            bodyLength:0,
         }
     },
     methods:{
@@ -67,6 +68,9 @@ const app = Vue.createApp({
                 console.log('Error sending email',error);
             })
             
+        },
+        updateBodyLength(){
+            this.bodyLength = this.emailBody.length;
         }
     }
 })
