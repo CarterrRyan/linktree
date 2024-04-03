@@ -65,4 +65,5 @@ ul{
     width:400px;
     height:200px;
     font:top;
+    resize: none;
 }
