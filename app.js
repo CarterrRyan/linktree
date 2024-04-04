@@ -66,7 +66,7 @@ const app = Vue.createApp({
                 alert('Please fill in all fields');
                 return;
             }
-            else if(!this.userEmail.contains('@')||!this.userEmail('.')){
+            else if(this.userEmail.indexof('@')===-1||this.userEmail.indexof('.')===-1){
                 alert('Please enter a valid email address')
                 return;
             }
