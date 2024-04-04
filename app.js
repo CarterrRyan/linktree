@@ -66,6 +66,10 @@ const app = Vue.createApp({
                 alert('Please fill in all fields');
                 return;
             }
+            else if(!this.userEmail.contains('@')||!this.userEmail('.')){
+                alert('Please enter a valid email address')
+                return;
+            }
             else{
                 axios.post('https://guarded-bastion-04501-1bab4507eb4c.herokuapp.com/api/email',{
                     userEmail:this.userEmail,
