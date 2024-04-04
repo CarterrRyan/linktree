@@ -9,6 +9,11 @@ const app = Vue.createApp({
             userEmail:'',
             emailBody:'',
             bodyLength:0,
+        };
+    },
+    computed:{
+        BodyLength(){
+            return this.emailBody.length;
         }
     },
     methods:{
@@ -69,11 +74,9 @@ const app = Vue.createApp({
             })
             this.userEmail='';
             this.emailBody='';
-            this.bodyLength=0;
+            
         },
-        updateBodyLength(){
-            this.bodyLength = this.emailBody.length;
-        }
+
     }
 })
 app.mount('#app')   
