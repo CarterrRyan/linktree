@@ -62,18 +62,24 @@ const app = Vue.createApp({
             });
         },
         sendEmail(){
-            axios.post('https://guarded-bastion-04501-1bab4507eb4c.herokuapp.com/api/email',{
-                userEmail:this.userEmail,
-                body:this.emailBody,
-            })
-            .then(response=>{
-                console.log(response.data);
-            })
-            .catch(error=>{
-                console.log('Error sending email',error);
-            })
-            this.userEmail='';
-            this.emailBody='';
+            if(this.userEmail==='' || this.emailBody===''){
+                alert('Please fill in all fields');
+                return;
+            }
+            else{
+                axios.post('https://guarded-bastion-04501-1bab4507eb4c.herokuapp.com/api/email',{
+                    userEmail:this.userEmail,
+                    body:this.emailBody,
+                })
+                .then(response=>{
+                    console.log(response.data);
+                })
+                .catch(error=>{
+                    console.log('Error sending email',error);
+                })
+                this.userEmail='';
+                this.emailBody='';
+            }
             
         },
 
