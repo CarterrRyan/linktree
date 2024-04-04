@@ -67,7 +67,9 @@ const app = Vue.createApp({
             .catch(error=>{
                 console.log('Error sending email',error);
             })
-            
+            this.userEmail='';
+            this.emailBody='';
+            this.bodyLength=0;
         },
         updateBodyLength(){
             this.bodyLength = this.emailBody.length;
