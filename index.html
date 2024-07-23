@@ -35,18 +35,10 @@
                     <li>Email: cartertodd123@gmail.com      <i @click="copyToClipboard" class="fa-solid fa-copy"></i></li>
                 </ul>
             </div>
-            <h3>
-                Send me an email!
-                <i @click="toggleEmail" class="fas fa-angle-down" :class="{'rotate': showEmail, 'rotate-up':!showEmail}"></i>
-            </h3>
-            <div v-if="showEmail">
-                <h4>Your email:</h4>
-                <input class="emailInput" type="text" placeholder="Your email goes here" v-model="userEmail">
-                <h4>Email body:</h4>
-                <textarea class="emailBody" type="text" placeholder="Email body goes here" v-model="emailBody" maxlength="500"></textarea><br>
-                <p>{{BodyLength}}/500</p>
-                <button @click="sendEmail">Send Email</button>
-            </div>
+           <div>
+            <h3>My projects</h3>
+            <button @click="myVerse">MyVerse1</button>
+           </div>
         </section>
     </div>
 </body>

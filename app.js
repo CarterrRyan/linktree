@@ -61,31 +61,9 @@ const app = Vue.createApp({
                 alert('Failed to copy email to clipboard');
             });
         },
-        sendEmail(){
-            if(this.userEmail==='' || this.emailBody===''){
-                alert('Please fill in all fields');
-                return;
-            }
-            else if(this.userEmail.indexOf('@')===-1||this.userEmail.indexOf('.')===-1){
-                alert('Please enter a valid email address')
-                return;
-            }
-            else{
-                axios.post('https://guarded-bastion-04501-1bab4507eb4c.herokuapp.com/api/email',{
-                    userEmail:this.userEmail,
-                    body:this.emailBody,
-                })
-                .then(response=>{
-                    console.log(response.data);
-                })
-                .catch(error=>{
-                    console.log('Error sending email',error);
-                })
-                this.userEmail='';
-                this.emailBody='';
-            }
-            
-        },
+        myverse(){
+            window.location.href='https://my-verse-ten.vercel.app'
+        }
 
     }
 })
