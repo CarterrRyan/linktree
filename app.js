@@ -9,7 +9,7 @@ const app = Vue.createApp({
             userEmail:'',
             emailBody:'',
             bodyLength:0,
-            link:'https://my-verse-ten.vercel.app'
+            link:''
         };
     },
     computed:{
@@ -64,8 +64,10 @@ const app = Vue.createApp({
         },
         myVerse(){
             window.location.href='https://my-verse-ten.vercel.app'
+        },
+        link(){
+            link='https://my-verse-ten.vercel.app'
         }
-
     }
 })
 app.mount('#app')   
