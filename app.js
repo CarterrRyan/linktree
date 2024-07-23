@@ -9,6 +9,7 @@ const app = Vue.createApp({
             userEmail:'',
             emailBody:'',
             bodyLength:0,
+            link:'https://my-verse-ten.vercel.app'
         };
     },
     computed:{
