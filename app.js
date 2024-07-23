@@ -45,6 +45,16 @@ const app = Vue.createApp({
                 console.log('Error fetching linkedIn url',error);
             });
         },
+        myVerse(){
+            axios.get('https://guarded-bastion-04501-1bab4507eb4c.herokuapp.com/api/myVerse')
+            .then(response=>{
+                window.location.href=response.data.url;
+            })
+            .catch(error =>{
+                console.log('Error fetching myVerse url',error);
+            })
+            
+        },
         toggleAbout(){
             this.showAbout=!this.showAbout;
         },
@@ -61,9 +71,6 @@ const app = Vue.createApp({
             {
                 alert('Failed to copy email to clipboard');
             });
-        },
-        myVerse(){
-            window.location.href='https://my-verse-ten.vercel.app'
         },
 
     }
