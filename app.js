@@ -61,7 +61,7 @@ const app = Vue.createApp({
                 alert('Failed to copy email to clipboard');
             });
         },
-        myverse(){
+        myVerse(){
             window.location.href='https://my-verse-ten.vercel.app'
         }
 
